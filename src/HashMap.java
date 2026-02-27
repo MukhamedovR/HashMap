@@ -83,7 +83,7 @@ public class HashMap<K, V> {
     private void resize() {
         LinkedList<Node<K, V>>[] oldTable = table;
         table = new LinkedList[oldTable.length * 2];
-        int oldSize = size; // Сохраняем старый размер
+        int oldSize = size;
         size = 0;
 
         for (LinkedList<Node<K, V>> bucket : oldTable) {
