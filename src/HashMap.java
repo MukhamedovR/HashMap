@@ -26,6 +26,7 @@ table = new LinkedList[INITIAL_CAPACITY];
 
 private int getIndex(K key) {
 if (key == null) return 0;
+// Использую битовую маску, чтобы избежать отрицательных индексов
 return (key.hashCode() & 0x7FFFFFFF) % table.length;
 }
 
@@ -97,9 +98,4 @@ this.put(node.key, node.value);
 public int size() {
 return size;
 }
-}
-
-    public int size() {
-        return size;
-    }
 }
